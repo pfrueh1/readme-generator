@@ -1,34 +1,43 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+//generates license badge based on user input
+function licenseBadge(license) {
+  if (license === 'MIT') {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  }else if (license === 'GNU GPLv3') {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+  }else if (license === 'Apache') {
+    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+  };
+};
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+//function to generate markdown for README
+module.exports = function generateMarkdown(data) {
+  const {title, description, installation, usage, license, contributing, tests, github} = data;
   return `
-  # ${data.title}
+  # ${title}
+  ${licenseBadge(license)}
+  ## Contents
+  [Description](#description)  
+  [Usage](#usage)  
+  [Installation](#installation)  
+  [License](#license)  
+  [Contribution](#contribution)  
+  [Tests](#tests)  
+  [Questions](#questions)  
   ## Description
-  ${data.description}
+  ${description}
   ## Usage
-  ${data.usage}
+  ${usage}
   ## Installation
-  ${data.installation}
+  ${installation}
   ### License
-  ${data.license}
+  ${license}
   ### Contribution
-  ${data.contributing}
+  ${contributing}
   ### Tests
-  ${data.tests}
+  ${tests}
   ### Questions
-  Submit questions to github.com/${data.github}  
+  Submit questions to github.com/${github}  
 `;
-}
+};
 
-module.exports = generateMarkdown;
