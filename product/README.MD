@@ -1,5 +1,5 @@
 
-  # README generator
+  # a
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Contents
   [Description](#description)  
@@ -10,16 +10,16 @@
   [Tests](#tests)  
   [Questions](#questions)  
   ## Description
-  A CLI that accepts user input to generate a custom README.md file
+  a
   ## Usage
-  run index with node.js and answer the questions. Your custom readme will be created in the product directory
+  a
   ## Installation
-  Clone the repository
+  a
   ### License
   MIT
   ### Contribution
   
   ### Tests
-  
+  a
   ### Questions
-  Submit questions to github.com/pfrueh1  
+  Submit questions to github.com/a  
